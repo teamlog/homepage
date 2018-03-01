@@ -1,12 +1,12 @@
-var express = require('express')
-var session = require('express-session')
-var favicon = require('express-favicon')
-var bodyParser = require('body-parser')
-var mongoose = require('mongoose')
-var fs = require('fs')
-var path = require('path')
-var moment = require('moment')
-var ejs = require('ejs')
+var express = require('express');
+var session = require('express-session');
+var favicon = require('express-favicon');
+var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
+var fs = require('fs');
+var path = require('path');
+var moment = require('moment');
+var ejs = require('ejs');
 var router = express.Router();
 var schema = mongoose.Schema;
 var app = express();
@@ -30,9 +30,9 @@ app.use(session({
 
 app.use(express.static('public'));
 
-mongoose.connect("mongodb://localhost:28001/teamlog", function (err) {
+mongoose.connect("mongodb://localhost:27017/teamlog", function (err) {
     if(err){
-        console.log('DB Error!')
+        console.log('DB Error!');
         throw err
     }
     else {
@@ -146,7 +146,7 @@ app.post('/newpeople', function (req, res) {
         why : body.why,
         whyteamlog : body.whyteamlog,
         self : body.self
-    })
+    });
 
     console.log(body)
 
@@ -196,7 +196,7 @@ app.get('/people', function (req, res) {
             }
         }
     })
-})
+});
 
 app.get('/peoplepassword', function (req, res) {
     req.session.destroy(function(){
@@ -205,7 +205,7 @@ app.get('/peoplepassword', function (req, res) {
     fs.readFile('password.html', 'utf-8', function (err, data) {
         res.send(data)
     })
-})
+});
 
 app.post('/peoplepassword', function (req, res) {
     var body = req.body;
@@ -227,7 +227,7 @@ app.get('/vote', function (req, res) {
             throw err
         }
         else if(result){
-            if(req.session.vote == undefined){
+            if(req.session.vote === undefined){
                 res.redirect('/votepassword')
             }
             else {
@@ -247,13 +247,13 @@ app.get('/votepassword', function (req, res) {
         req.session;
     });
     fs.readFile('password.html', 'utf-8', function (err, data) {
-        res.send(data)
+        res.send(data);
     })
-})
+});
 
 app.post('/votepassword', function (req, res) {
     var body = req.body;
-    if(body.password == 'teamlogzzang2017'){
+    if(body.password === 'teamlogzzang2017'){
         req.session.vote = 'asdf'
         console.log('Master Login')
         res.redirect('/vote')
