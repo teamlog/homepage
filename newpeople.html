@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>TeamLog New People</title>
+    <style media="screen">
+
+    *{-webkit-text-size-adjust:none}
+
+      body{
+        font-family: 'Orbitron', sans-serif;
+        color: white;
+        background-color: rgba(10, 13, 30, 0.86);
+        background-image: url("../img/bg-shapes.png"); /*!!!배경이미지 경로 재설정 필요 - 팀로그 홈페이지 커리큘럼 이미지와 동일!!!*/
+        background-size: cover;
+        background-position: 50% -178px;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      .layer{
+        position:absolute;
+        display:table;
+        top:0;
+        left:0;
+        width:100%;
+        height:80%
+      }
+
+      .inlayer{
+        display: table-cell;
+        vertical-align:middle;
+      }
+      .contents{
+        display: flex;
+        display: -webkit-flex;
+      }
+      #container{
+        display: flex;
+        display: -webkit-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        margin-top: 20px;
+      }
+
+      h1{
+        font-size: 50px;
+        font-weight: 100;
+      }@media(min-width:470px) {
+        h1{
+          font-size: 60px;
+        }
+      }
+      div{
+        margin-bottom: 5px;
+      }
+      .input{
+        margin-top: 5px;
+      }
+      input[type=text]{
+        font-size: 90%;
+        border: 1.3px solid #141a22;
+        background-color: #141a22;
+        height: 25px;
+        color: white;
+        padding-left: 5px;
+      }
+      input[type=text]:hover{
+        transition: 0.1s;
+        border: 1.3px solid #eee;
+        border-radius: 1px;
+      }
+      textarea{
+        margin-top: 5px;
+        width: 96.5%;
+        overflow: auto;
+        resize: none;
+        border: none;
+        padding: 5px 5px;
+        background-color: #141a22;
+        color: white;
+        border: 1.3px solid #141a22;
+        font-weight: 300;
+        font-size: 12px;
+      }
+      textarea:hover{
+        transition: 0.2s;
+        border: 1.3px solid #eee;
+        border-radius: 1px;
+      }
+      b{
+        color: #c71b23;
+      }
+      .choose{
+        position: relative;
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        -webkit-flex-direction: row;
+        margin-bottom: 7px;
+      }
+      .select{
+        display: block;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 100%;
+        position: relative;
+      }
+
+      input[type=radio]{
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        margin-bottom: 3px;
+      }
+      input[type=checkbox]{
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        margin-bottom: 3px;
+      }
+      label{
+        text-align: center;
+        display: block;
+        line-height: 28px;
+        padding-bottom: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 98%;
+        height: 25px;
+        z-index: 10;
+        cursor:pointer;
+        border:none;
+        background-color: #141a22;
+        transition: 0.2s;
+      }
+      .on{
+        background-color: #c71b23;
+        transition: 0.2s;
+        font-weight: bold;
+      }
+
+      #firstline{
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: column;
+        -webkit-flex-direction: row;
+      }
+      #firstline input{
+        width: 150px;
+      }
+      #firstsec{
+        padding-left: 30px;
+      }
+      .gwa{
+        width: 83px;
+        line-height: 25px;
+
+      }
+      #secondline input{
+        margin-top: 7px;
+        width: 355px;
+      }
+      input[type=submit]{
+        float: right;
+      }
+      #secondselect .select{
+        margin-top: 5px;
+        margin-bottom: 5px;
+      }
+      input[type=submit]{
+        border: 2px solid rgb(140, 10, 10);
+        background-color: #141a22;
+        color: white;
+        border-radius: 2px;
+        font-weight: 500;
+        width: 50px;
+        height: 25px;
+      }
+      input[type=submit]:hover{
+        background-color: #c71b23;
+        border: 2px solid #c71b23;
+        color: white;
+        font-weight: 500;
+        transition: 0.2s;
+      }
+      fieldset{
+        border: 2px solid rgb(170, 20, 20);
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 9px;
+        margin-bottom: 30px;
+        background-color: rgba(23, 20, 36, 0.3);
+      }
+      .sent{
+        width: 430px;
+        margin-top: 30px;
+      }
+      #warn{
+        padding-top: 12px;
+        margin-top: 15px;
+        overflow: auto;
+
+      }
+      #under{
+        margin-top: 120px;
+        margin-bottom: 10px;
+      }@media(max-width:470px){
+        #firstline{
+          flex-direction: column;
+        }
+        #firstline input{
+          width: 100%;
+        }
+        #firstsec{
+          padding-left: 0px;
+        }
+        .choose{
+          display:inherit;
+          margin-bottom: 0px;
+        }
+        label{
+          width: 100%;
+        }
+        #secondline input{
+          width: 100%;
+          margin-top: 2px;
+        }
+        .sent{
+          width: 300px;
+        }
+      }
+      @media(max-width:370px){
+        h1{
+          font-size: 40px;
+        }
+      }
+
+
+    </style>
+</head>
+<body>
+
+<div class="layer">
+<div class="inlayer">
+<div class="contents">
+  <span id="container">
+      <!--<h1> 지원 마감되었습니다 </h1>-->
+       <h1>TEAM <b>LOG</b></h1>
+
+    <form method="post">
+      <fieldset>
+        <span id="firstline">
+          <div class="input">이름 <input type="text" name="name"></div>
+          <div class="input" id="firstsec">학번 <input type="text" name="number"></div>
+        </span>
+
+        <div class="input">
+          <span class="choose">
+            <span class="gwa">
+            학과</span>
+            <span class="select">
+              <input id="IC" type="radio" name="gua" value="IC"><label class="gua" for="IC">정보통신과</label>
+            </span>
+            <span class="select">
+              <input id="SW" type="radio" name="gua" value="SW"><label class="gua" for="SW">소프트웨어과</label>
+            </span>
+          </span>
+          <span class="choose">
+            <span class="gwa">
+             </span>
+            <span class="select">
+              <input id="TM" type="radio" name="gua" value="TM"><label class="gua" for="TM">테크노경영과</label>
+            </span>
+            <span class="select">
+              <input id="MM" type="radio" name="gua" value="MM"><label class="gua" for="MM">멀티미디어과</label>
+            </span>
+          </span>
+        </div>
+
+        <span id="secondline"><div class="input">연락처 <input type="text" name="contact"></div></span>
+      </fieldset>
+
+
+
+      <div class="input" id="secondselect">
+        <span id="part">
+        지원분야</span>
+        <span class="choose">
+          <span class="select">
+            <input id="button3" type="checkbox" name="part" value="server"><label class="part" id="server" for="button3">서버</label>
+          </span>
+          <span class="select">
+            <input id="button4" type="checkbox" name="part" value="network"> <label class="part" id="network" for="button4">네트워크</label>
+          </span>
+        </span>
+      </div>
+
+      <textarea name="warn" rows="26" cols="30" id="warn" readonly="readonly">
+※주의사항※
+
+○ 지원서의 제출 마감은 2017년 3월 17일 13시 00분입니다.
+
+○ 성명과 학번을 정확히 기입하십시오.
+
+○ 면접 전형을 비롯한 종합적인 사정 과정에 반영되는 중요한 자료이므로 반드시 사실에 근거하여 명확히 작성하십시오.
+
+○ 표절, 대리 작성 등의 부정행위가 발견될 경우 실격처리 되며, 이 사실을 다른 동아리에 통보할 수 있습니다.
+
+○ 재신청 시 담당자 연락후 담당자 지시에 따라 재신청을 진행합니다.
+담당자 연락처 : 010-9186-0684
+
+○ 합격 이후에 부정행위가 발견될 경우 합격이 취소됩니다.
+
+○ 기한 이후에 제출된 지원서는 일체 받지 않습니다.
+
+○ 지원서를 제출하지 않은 지원자는 면접을 응시할 수 없으며, 동아리에 입부할 수 없습니다.
+
+○ 지원서를 제출함으로써 지원자는 위의 내용 위반시에 발생하는 모든 불이익에 대한 책임을 지게됩니다.</textarea>
+      <div class="input">
+        <div class="sent">
+          1. Team Log에 입부하여 가장 먼저 하고 싶은 일은 무엇입니까? 지원자의 열정을 보일 수 있는 경험과 연관하여 기술하십시오.
+        </div>
+         <textarea name="why" rows="12" cols="30"></textarea></div>
+      <div class="input">
+        <div class="sent">
+          2. 스스로 호감을 가지고 시간과 노력을 투자하는 관심분야가 있거나 있었다면 이를 기술하십시오.
+          그리고 그 분야를 어떻게 알게 되었는지,
+          또 그 분야로 어떠한 결과를 내었는지 기술하십시오.
+        </div> <textarea name="self" rows="12" cols="30"></textarea></div>
+      <div class="input">
+        <div class="sent">
+          3. Team Log가 지원자를 선발하여야 하는 이유는 무엇입니까?
+          지원자 본인을 자유롭게 소개하십시오. 지원자의 활동을 중점으로 기술하십시오.
+        </div> <textarea name="whyteamlog" rows="12" cols="30"></textarea></div>
+      <div class="input"><input type="submit" value="제출"></div>
+      </form>
+
+
+
+
+
+      <div id="under">
+        © 2017 TeamLog
+      </div>
+    </span>
+
+</div>
+</div>
+</div>
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+  var check1 = 0;
+  var check2 = 0;
+  $(document).ready(function(){
+    $(".gua").bind('click',function(){
+      $(".gua").removeClass("on");
+      $(this).addClass("on");
+    });
+
+    $("#server").bind('click',function(){
+      if (check1==0) {
+        $("#server").addClass("on");
+      }
+      else {
+        $("#server").removeClass("on");
+      }
+      check1=(check1+1)%2;
+    });
+    $("#network").bind('click',function(){
+      if (check2==0) {
+        $("#network").addClass("on");
+      }
+      else {
+        $("#network").removeClass("on");
+      }
+      check2=(check2+1)%2;
+    });
+
+
+  });
+</script>
+
+</body>
+</html>

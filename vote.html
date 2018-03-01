@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vote Result</title>
+</head>
+<body>
+<table width = "100%" border = "1">
+    <tr>
+        <td>이름</td>
+        <td>팀</td>
+    </tr>
+    <% data.forEach(function (item, index){ %></%>
+<tr>
+    <td><%= item.name %></td>
+    <td><%= item.team %></td>
+</tr>
+<% }); %>
+</table>
+</body>
+</html>

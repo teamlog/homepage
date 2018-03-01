@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<table lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>People Result</title>
+</head>
+<body>
+<table width = "100%" border = "1">
+<tr>
+    <td>접수시간</td>
+    <td>학번</td>
+    <td>이름</td>
+    <td>연락처</td>
+    <td>학과</td>
+    <td>지원분야</td>
+    <td>지원동기</td>
+    <td>자기소개</td>
+    <td>뽑아야 하는 이유</td>
+</tr>
+<% data.forEach(function (item, index){ %><!--</%>-->
+<tr>
+    <td><%= item.time %></td>
+    <td><%= item.number %></td>
+    <td><%= item.name %></td>
+    <td><%= item.contact %></td>
+    <td><%= item.gua %></td>
+    <td><%= item.part %></td>
+    <td><%= item.why %></td>
+    <td><%= item.self %></td>
+    <td><%= item.whyteamlog %></td>
+</tr>
+<% }); %>
+</table>
+</body>
+</html>

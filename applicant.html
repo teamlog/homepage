@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+    <title>TeamLog 합격자명단</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style media="screen">
+
+    *{-webkit-text-size-adjust:none}
+
+      body{
+        font-family: 'Orbitron', sans-serif;
+        color: white;
+        background-color: #141a22;
+        background-image: url("../img/bg-shapes.png");
+        background-size: cover;
+        background-position: 50% -178px;
+        font-weight: 300;
+        font-size: 14px;
+      }
+      .layer{
+        position:absolute;
+        display:table;
+        top:0;
+        left:0;
+        width:100%;
+        height:80%
+      }
+
+      .inlayer{
+        display: table-cell;
+        vertical-align:middle;
+      }
+      .contents{
+        display: flex;
+        display: -webkit-flex;
+      }
+      .container{
+        display: flex;
+        display: -webkit-flex;
+        position: relative;
+        width: 98%;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        margin-top: 20px;
+        opacity: 0.0;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        top: 150px;
+      }
+
+
+      #title{
+        font-size: 30px;
+        margin-bottom: 30px;
+        color: #c71b23
+      }
+
+      a{
+        color: white;
+        font-weight: 500;
+        text-decoration:none;
+        text-align: center;
+        padding: 4px 4px 4px 4px;
+        position: relative;
+        font-size: 25px;
+      }
+      a:hover{
+        color: #c71b23;
+
+        font-weight: 500;
+        transition: 0.2s;
+      }
+      .frame{
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+      }
+
+      h2{
+        display: block;
+        opacity: 0.2;
+        position: relative;
+      }
+      #contain{
+        height: 100%;
+      }
+      @media(max-width:450px){
+        #bottom{
+          margin-bottom: 50%;
+        }
+      }
+
+
+    </style>
+</head>
+
+
+<body>
+  <div id="contain">
+    <span id="title" class="container">합격을 축하합니다!</span>
+    <span class="container">
+    최주선 &nbsp;&nbsp; 이예진 &nbsp;&nbsp; 박철규 &nbsp;&nbsp; 방성훈 &nbsp;&nbsp; 강지훈<br/>
+    </span>
+    <span class="container" id="bottom">김우민 &nbsp;&nbsp; 장성윤 &nbsp;&nbsp; 박상준 &nbsp;&nbsp; 이우민 &nbsp;&nbsp; 이효민 &nbsp;&nbsp; 정의수</span>
+
+
+  <div class="frame">
+    <a href="/main"> 메인으로 </a>
+  </div>
+  </div>
+
+
+<script>
+$(document).ready(function(){
+  $("span").animate({
+        top: '200px',
+        opacity: '1.0',
+    },(1000));
+});
+</script>
+
+</body>
+</html>
