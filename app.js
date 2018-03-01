@@ -92,7 +92,7 @@ app.listen(80, function (err) {
         var time = moment().format('YYYY년 MM월 DD일, h:mm:ss A');
         console.log(time)
     }
-})
+});
 
 app.get('/', function (req, res) {
     res.redirect('/main')
@@ -132,8 +132,8 @@ app.get('/newpeople', function (req, res) {
 })
 
 app.post('/newpeople', function (req, res) {
-    var error = '<script type="text/javascript">alert("이미 신청되었습니다. 재신청 문의 010-9186-0684");location.href="/main";</script>';
-    var success = '<script type="text/javascript">alert("신청되었습니다. 면접일은 3월 16일 ~ 3월 17일 입니다.");location.href="/main";</script>'
+    var error = '<script type="text/javascript">alert("이미 신청되었습니다. 재신청 문의 010-2629-2060");location.href="/main";</script>';
+    var success = '<script type="text/javascript">alert("신청되었습니다. 면접일은 3월 15일 ~ 3월 16일 입니다.");location.href="/main";</script>'
     var body = req.body;
     var time = moment().format('YYYY년 MM월 DD일, h:mm:ss A');
     var user = new New({
