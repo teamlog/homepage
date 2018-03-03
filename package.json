@@ -1,27 +1,15 @@
 {
-  "name": "teamlog",
-  "version": "1.0.0",
-  "description": "",
-  "main": "Gruntfile.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://SunSet0418@bitbucket.org/SunSet0418/2017_teamlog.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/SunSet0418/2017_teamlog#readme",
+  "name": "homepage",
+  "version": "0.0.1",
   "dependencies": {
-    "body-parser": "^1.17.0",
-    "ejs": "^2.5.6",
-    "express": "^4.15.0",
-    "express-favicon": "^2.0.0",
-    "express-session": "^1.15.1",
-    "fs": "0.0.1-security",
-    "moment": "^2.17.1",
-    "mongoose": "^4.8.5",
-    "path": "^0.12.7"
+    "ejs": "^2.5.7",
+    "http2": "^3.3.7",
+    "koa": "^2.5.0",
+    "koa-favicon": "^2.0.0",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
+    "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4",
+    "mongoose": "^5.0.7"
   }
 }
