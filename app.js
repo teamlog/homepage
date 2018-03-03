@@ -2,13 +2,11 @@
 //require modules
 const koa = require('koa');
 const Router = require('koa-router');
-const db = require('mongoose');
 const http2 = require('http2');
 const favicon = require('koa-favicon');
 const render = require('./lib/render');
 const fs = require('fs');
 const serve = require('koa-static');
-const env = require('')
 //create Object
 const app = module.exports = new koa();
 const router = module.exports = new Router();
