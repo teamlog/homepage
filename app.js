@@ -11,8 +11,8 @@ const serve = require('koa-static');
 const app = module.exports = new koa();
 const router = module.exports = new Router();
 const serverOption = {
-    key : fs.readFileSync(process.env.KEY),
-    cert: fs.readFileSync(process.env.CERT)
+    key : fs.readFileSync('./key.pem'),
+    cert: fs.readFileSync('./cert.pem')
 };
 //config
 //middleware
