@@ -13,7 +13,7 @@
         font-family: 'Orbitron', sans-serif;
         color: white;
         background-color: rgba(10, 13, 30, 0.86);
-        background-image: url("./public/img/bg-shapes.png"); /*!!!배경이미지 경로 재설정 필요 - 팀로그 홈페이지 커리큘럼 이미지와 동일!!!*/
+        background-image: url("/img/bg-shapes.png"); /*!!!배경이미지 경로 재설정 필요 - 팀로그 홈페이지 커리큘럼 이미지와 동일!!!*/
         background-size: cover;
         background-position: 50% -178px;
         font-weight: 300;
@@ -260,7 +260,7 @@
       <!--<h1> 지원 마감되었습니다 </h1>-->
        <h1>TEAM <b>LOG</b></h1>
 
-    <form method="post">
+    <form method="post" action="/newpeople">
       <fieldset>
         <span id="firstline">
           <div class="input">이름 <input type="text" name="name"></div>
@@ -307,7 +307,7 @@
           </span>
         </span>
       </div>
-
+v
       <textarea name="warn" rows="26" cols="30" id="warn" readonly="readonly">
 ※주의사항※
 
