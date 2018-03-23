@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c5d0d087-d2bb-4b0d-891c-21b03baa6713" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change beforePath="$PROJECT_DIR$/successful_list.html" afterPath="$PROJECT_DIR$/successful_list.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -106,8 +106,8 @@
       <file leaf-file-name="successful_list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/successful_list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="364">
+              <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -164,6 +164,7 @@
         <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/applicant.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/successful_list.html" />
       </list>
     </option>
   </component>
@@ -386,7 +387,7 @@
       <workItem from="1520223848525" duration="12088000" />
       <workItem from="1520916399305" duration="720000" />
       <workItem from="1520917325095" duration="2082000" />
-      <workItem from="1521819016184" duration="483000" />
+      <workItem from="1521819016184" duration="899000" />
     </task>
     <task id="LOCAL-00001" summary="version 2018">
       <created>1519922833848</created>
@@ -472,11 +473,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521819424271</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="asdf">
+      <created>1521819506601</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1521819506602</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50243000" />
+    <option name="totallyTimeSpent" value="50659000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -540,7 +548,8 @@
     <MESSAGE value="version 2018" />
     <MESSAGE value="edit" />
     <MESSAGE value="합격" />
-    <option name="LAST_COMMIT_MESSAGE" value="합격" />
+    <MESSAGE value="asdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="asdf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -972,8 +981,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/successful_list.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        <state relative-caret-position="364">
+          <caret line="22" column="54" lean-forward="true" selection-start-line="22" selection-start-column="54" selection-end-line="22" selection-end-column="54" />
           <folding />
         </state>
       </provider>
